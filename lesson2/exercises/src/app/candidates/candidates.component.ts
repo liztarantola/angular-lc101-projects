@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Candidate} from '../models/candidate';
 @Component({
   selector: 'candidates',
   templateUrl: './candidates.component.html',
@@ -25,8 +25,18 @@ export class CandidatesComponent implements OnInit {
 
   // Code the addToCrew function here:
 
+  addToCrew (candidate: Candidate) {
+    console.log('hi we are in our function')
+    if (!this.crew.includes(candidate)) {
+      // (currentCrewmember) => currentCrewmember === candidate)) {
+      this.crew.push(candidate);
+    }
+  }
+
 
   // BONUS: Code the changeMissionName function here:
-
+changeMissionName(newName){
+  this.missionName = newName
+}
 
 }
