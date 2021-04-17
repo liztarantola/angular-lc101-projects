@@ -31,7 +31,7 @@ export class AppComponent {
   }
 
   gutterCheck(width, height) {
-    if (this.height > 320000 || this.width > 200000 || height < 0 || width < 0) {
+    if (this.height > 320000 || this.width > 360000 || height < 0 || width < 0) {
       if (height < 0) {
         this.downEnabled = false;
       }
