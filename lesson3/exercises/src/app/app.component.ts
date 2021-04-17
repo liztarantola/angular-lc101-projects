@@ -31,18 +31,26 @@ export class AppComponent {
   }
 
   gutterCheck(width, height) {
-    if (this.height > 320000 || this.width > 360000 || height < 0 || width < 0) {
-      if (height < 0) {
+    if (this.height > 320000 || this.width > 360000 || height < 10000 || width < 0) {
+      if (height < 10000) {
         this.downEnabled = false;
       }
       if (height > 320000) {
         this.upEnabled = false;
+      }
+      if (width < 0) {
+        this.leftEnabled = false;
+      }
+      if (width > 360000) {
+        this.rightEnabled = false;
       }
       this.color = 'orange'
     } else {
       this.color = 'blue';
       this.downEnabled = true;
       this.upEnabled = true;
+      this.leftEnabled = true;
+      this.rightEnabled = true;
       }
   }
 
